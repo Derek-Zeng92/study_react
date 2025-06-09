@@ -1,6 +1,5 @@
 // 项目的入口文件
-import React from 'react';
-import ReactDOM from 'react-dom';
+import { createRoot } from 'react-dom/client';
 import App from './App';
 import LifyCycle from './LifyCycle';
 import ControlInput from './ControlInput';
@@ -88,7 +87,9 @@ function Welcome(props) {
 // ReactDOM.render(<ControlInput />, document.querySelector('#root'));
 // ReactDOM.render(<NoControlInput />, document.querySelector('#root'));
 // ReactDOM.render(<FormSimple />, document.querySelector('#root'));
-ReactDOM.render(<CartSimple />, document.querySelector('#root'));
+
+const root = createRoot(document.getElementById('root'));
+root.render(<CartSimple />);
 
 
 
